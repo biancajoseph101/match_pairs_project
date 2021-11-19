@@ -35,7 +35,7 @@ const cardObjects = [
     url: 'https://cdn.shopify.com/s/files/1/0341/4893/products/azureus_1024x1024.jpg?v=1576277674'
   },
   {
-    name: 'blue frog2',
+    name: 'blue frog1',
     card: 3,
     url: 'https://cdn.shopify.com/s/files/1/0341/4893/products/azureus_1024x1024.jpg?v=1576277674'
   }
@@ -60,15 +60,17 @@ for (let i = 0; i < cards.length; i++) {
     } else {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
-      compareCards();
+      setTimeout(compareCards, 1500);
     }
   });
 }
 
-//put timer function
 function compareCards() {
   if (flipOne.name === flipTwo.name) {
     cardsMatched = true;
+    setTimeout(() => {
+      console.log('try again!');
+    }, 2000);
   } else {
     cardsMatched = false;
   }
@@ -78,13 +80,14 @@ function compareCards() {
 
 function resetBoard() {
   if (cardsMatched === true) {
-    //other winning stuff
-
+    //other winning stuff display etc
+    display.innerText = 'well done!';
     flipOne.name = '';
     flipOne.index = '';
     flipTwo.name = '';
     flipTwo.index = '';
   } else {
+    display.innerText = 'try again';
     incorrectPair();
     flipOne.name = '';
     flipOne.index = '';
