@@ -25,29 +25,17 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-/* 
-#green1 {
-  background-image: url("http://bwvp.ecolinc.vic.edu.au/sites/default/files/species/Verreaux's_Frog_01_0.jpg");
-}
 
-#green2 {
-  background-image: url("http://bwvp.ecolinc.vic.edu.au/sites/default/files/species/Verreaux's_Frog_01_0.jpg");
+.noClick {
+  pointer-events: none;
 }
-
-#blue1 {
-  background-image: url('https://cdn.shopify.com/s/files/1/0341/4893/products/azureus_1024x1024.jpg?v=1576277674');
-}
-
-#blue2 {
-  background-image: url('https://cdn.shopify.com/s/files/1/0341/4893/products/azureus_1024x1024.jpg?v=1576277674');
-} */
 
 .backcard {
   float: center;
   background-color: darkblue;
   padding: 5px;
   width: 200px;
-  height: 350px;
+  height: 200px;
   margin: 10px;
   margin-top: 10px;
 }
