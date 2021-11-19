@@ -42,7 +42,7 @@ body {
   background-image: url('https://cdn.shopify.com/s/files/1/0341/4893/products/azureus_1024x1024.jpg?v=1576277674');
 } */
 
-.card {
+.backcard {
   float: center;
   background-color: darkblue;
   padding: 5px;
