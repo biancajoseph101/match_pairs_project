@@ -1,12 +1,17 @@
 //variables
 const cards = [...document.querySelectorAll('.backcard')];
 const display = document.querySelector('.display');
-const restartGame = document.querySelector('#restartButton');
-let cardsClicked = 0;
+const firstLevelButton = (document.querySelector('#firstLevelButton').onclick =
+  function () {
+    location.href =
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
+  });
 
-const cardBack =
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F218%2F160%2Foriginal%2Fornamental-round-lace-pattern-vector.jpg&f=1&nofb=1';
-//const flippedCards =
+const restartButton = (document.querySelector('#restartButton').onclick =
+  Init());
+
+let cardsClicked = 0;
+let winnerMessageCount = 0;
 let flipOne = {
   name: '',
   index: ''
@@ -17,6 +22,8 @@ let flipTwo = {
 };
 let cardsMatched = false;
 let gameOver = false;
+const cardBack =
+  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F218%2F160%2Foriginal%2Fornamental-round-lace-pattern-vector.jpg&f=1&nofb=1';
 
 const cardObjects = [
   {
@@ -98,7 +105,7 @@ function cardListener(i) {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
-      setTimeout(compareCards, 1500);
+      setTimeout(compareCards, 1800);
       break;
     default:
   }
@@ -125,14 +132,15 @@ function incorrectPair() {
 }
 
 function resetBoard() {
-  console.log('resetBoard');
   if (cardsMatched === true) {
     //other winning stuff display etc
     display.innerText = '';
-    display.innerText = 'well done!';
+    display.innerText = 'WELL DONE!';
+    winnerMessageCount++;
+    checkEndGame();
   } else if (cardsMatched === false) {
     display.innerText = '';
-    display.innerText = 'try again';
+    display.innerText = 'HMM..TRY AGAIN';
     incorrectPair();
   }
   flipOne.name = '';
@@ -141,6 +149,17 @@ function resetBoard() {
   flipTwo.index = '';
   cardsClicked = 0;
   addClicks();
+}
+
+console.log(winnerMessageCount);
+checkEndGame();
+
+function checkEndGame() {
+  if (winnerMessageCount === 4) {
+    display.innerText = 'CONGRATULATIONS YOU WON!';
+    removeClicks();
+    gameOver = true;
+  }
 }
 
 // if (cards[i] === true) {
@@ -153,4 +172,21 @@ function resetBoard() {
 //         if (cardsMatched)
 //     })}
 
-restarButton.addEventListener('click', restartGame);
+function Init() {
+  cardsClicked = 0;
+  winnerMessageCount = 0;
+  flipOne = {
+    name: '',
+    index: ''
+  };
+  flipTwo = {
+    name: '',
+    index: ''
+  };
+  cardsMatched = false;
+  gameOver = false;
+  cardBack =
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F218%2F160%2Foriginal%2Fornamental-round-lace-pattern-vector.jpg&f=1&nofb=1';
+}
+
+restartButton.addEventListener('click', restartGame());

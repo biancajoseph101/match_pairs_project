@@ -2,11 +2,19 @@
 const cards = [...document.querySelectorAll('.backcard')];
 const display = document.querySelector('.display');
 const restartGame = document.querySelector('#restartButton');
+
+const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
+  function () {
+    location.href =
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
+  });
 let cardsClicked = 0;
+let winnerMessageCount = 0;
 
 const cardBack =
   'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F218%2F160%2Foriginal%2Fornamental-round-lace-pattern-vector.jpg&f=1&nofb=1';
 //const flippedCards =
+
 let flipOne = {
   name: '',
   index: ''
@@ -89,19 +97,16 @@ function cardListener(i) {
   //below is assigning value of card names to flipped cards
   switch (cardsClicked) {
     case 1:
-      console.log('card 1 flip');
       flipOne.name = cardObjects[i].name;
       flipOne.index = i;
       break;
     case 2:
-      console.log('card 2 flip');
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
       setTimeout(compareCards, 1500);
       break;
     default:
-      console.log('something has gone horribly wrong help');
   }
 }
 
@@ -126,14 +131,14 @@ function incorrectPair() {
 }
 
 function resetBoard() {
-  console.log('resetBoard');
   if (cardsMatched === true) {
     //other winning stuff display etc
     display.innerText = '';
-    display.innerText = 'well done!';
+    display.innerText = 'NICE JOB!';
+    winnerMessageCount++;
   } else if (cardsMatched === false) {
     display.innerText = '';
-    display.innerText = 'try again';
+    display.innerText = 'BETTER LUCK NEXT TIME...';
     incorrectPair();
   }
   flipOne.name = '';
@@ -142,6 +147,17 @@ function resetBoard() {
   flipTwo.index = '';
   cardsClicked = 0;
   addClicks();
+}
+
+console.log(winnerMessageCount);
+checkEndGame();
+
+function checkEndGame() {
+  console.log(winnerMessageCount);
+  if (winnerMessageCount === 4) {
+    display.innerText = 'CONGRATULATIONS YOU WON!';
+    gameOver = true;
+  }
 }
 
 // if (cards[i] === true) {
@@ -154,4 +170,7 @@ function resetBoard() {
 //         if (cardsMatched)
 //     })}
 
-restarButton.addEventListener('click', restartGame);
+//function newLevel {
+
+//nextLevelButton.addEventListener('click', newLevel);
+restartButton.addEventListener('click', resetBoard);
