@@ -41,6 +41,11 @@ body {
   text-align: center;
 }
 
+.gameIntro {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 .gameContainer {
   display: flex;
   flex-wrap: wrap;
