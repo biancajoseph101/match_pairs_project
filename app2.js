@@ -1,4 +1,3 @@
-//variables
 const cards = [...document.querySelectorAll('.backcard')];
 const display = document.querySelector('.display');
 
@@ -84,8 +83,6 @@ for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', () => cardListener(i));
 }
 
-//event listeners
-
 function addClicks() {
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.remove('noClick');
@@ -98,7 +95,6 @@ function cardListener(i) {
   }
   cards[i].setAttribute('src', cardObjects[i].url);
   cardsClicked += 1;
-  //below is assigning value of card names to flipped cards
   switch (cardsClicked) {
     case 1:
       flipOne.name = cardObjects[i].name;
@@ -136,7 +132,6 @@ function incorrectPair() {
 
 function resetBoard() {
   if (cardsMatched === true) {
-    //other winning stuff display etc
     display.innerText = '';
     display.innerText = 'WELL DONE!';
     winnerMessageCount++;
@@ -163,5 +158,3 @@ function checkEndGame() {
     removeClicks();
   }
 }
-
-//restartButton.addEventListener('click', restartGame());

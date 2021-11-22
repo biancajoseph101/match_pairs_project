@@ -11,7 +11,7 @@ body {
 body {
   background: linear-gradient(-45deg, #030774, #de6000, #873adf, #c0fa12);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -90,8 +90,9 @@ body {
   color: white;
   padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #nextLevelButton {
@@ -102,7 +103,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #lastLevelButton {
@@ -113,7 +114,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #restartButton {
@@ -124,7 +125,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 50px;
 }
 
@@ -136,5 +137,5 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
 }
