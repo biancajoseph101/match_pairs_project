@@ -81,14 +81,12 @@ for (let i = 0; i < cards.length; i++) {
 //event listeners
 
 function addClicks() {
-  console.log('add clix');
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.remove('noClick');
   }
 }
 
 function cardListener(i) {
-  console.log('eventListener');
   if (cardsClicked >= 2) {
     return;
   }
@@ -111,7 +109,6 @@ function cardListener(i) {
 }
 
 function removeClicks() {
-  console.log('removing clix');
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.add('noClick');
   }
@@ -154,7 +151,6 @@ function resetBoard() {
 }
 
 function checkEndGame() {
-  console.log(winnerMessageCount);
   if (winnerMessageCount === 4) {
     display.innerText =
       'CONGRATULATIONS YOU WON! PLAY AGAIN OR GO TO LEVEL TWO.';

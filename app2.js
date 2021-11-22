@@ -87,7 +87,6 @@ function addClicks() {
 }
 
 function cardListener(i) {
-  console.log('eventListener');
   if (cardsClicked >= 2) {
     return;
   }
@@ -96,12 +95,10 @@ function cardListener(i) {
   //below is assigning value of card names to flipped cards
   switch (cardsClicked) {
     case 1:
-      console.log('card 1 flip');
       flipOne.name = cardObjects[i].name;
       flipOne.index = i;
       break;
     case 2:
-      console.log('card 2 flip');
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
@@ -150,16 +147,14 @@ function resetBoard() {
   cardsClicked = 0;
   if (gameOver === false) {
     addClicks();
+  }
 }
-
-console.log(winnerMessageCount);
-checkEndGame();
 
 function checkEndGame() {
   if (winnerMessageCount === 4) {
     display.innerText = 'CONGRATULATIONS YOU WON!';
-    removeClicks();
     gameOver = true;
+    removeClicks();
   }
 }
 
