@@ -45,7 +45,7 @@ const cardObjects = [
   {
     name: 'lionPride',
     card: 2,
-    url: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.dailymail.co.uk%2Fi%2Fpix%2F2008%2F12%2F01%2Farticle-0-02A57477000005DC-81_468x296.jpg&f=1&nofb=1'
+    url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.usgo.org%2Fnews%2Fwp-content%2Fuploads%2F2013%2F11%2F39.-Three-male-Lions-walking-closely-together-Masai-Mara-Kenya.jpg&f=1&nofb=1'
   },
   {
     name: 'fishSchool',
@@ -74,19 +74,14 @@ const cardObjects = [
   }
 ];
 
-// if (cardFlipped && cardObjects[i].url === cardObjects[i].url) {
-//   gameOver = true;
-// }
-
-//console.log(cardObjects[1].url);
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', () => cardListener(i));
 }
 
 //event listeners
-//flip cards
 
 function addClicks() {
+  console.log('add clix');
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.remove('noClick');
   }
@@ -109,13 +104,14 @@ function cardListener(i) {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
-      setTimeout(compareCards, 1750);
+      setTimeout(compareCards, 1800);
       break;
     default:
   }
 }
 
 function removeClicks() {
+  console.log('removing clix');
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.add('noClick');
   }
@@ -152,11 +148,13 @@ function resetBoard() {
   flipTwo.name = '';
   flipTwo.index = '';
   cardsClicked = 0;
-  addClicks();
+  if (gameOver === false) {
+    addClicks();
+  }
 }
 
-console.log(winnerMessageCount);
-checkEndGame();
+//console.log(winnerMessageCount);
+//checkEndGame();
 
 function checkEndGame() {
   console.log(winnerMessageCount);
@@ -164,6 +162,7 @@ function checkEndGame() {
     display.innerText =
       'CONGRATULATIONS YOU WON! PLAY AGAIN OR GO TO LEVEL TWO.';
     gameOver = true;
+    removeClicks();
   }
 }
 

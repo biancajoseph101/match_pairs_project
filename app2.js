@@ -74,17 +74,11 @@ const cardObjects = [
   }
 ];
 
-// if (cardFlipped && cardObjects[i].url === cardObjects[i].url) {
-//   gameOver = true;
-// }
-
-//console.log(cardObjects[1].url);
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener('click', () => cardListener(i));
 }
 
 //event listeners
-//flip cards
 
 function addClicks() {
   for (let i = 0; i < cards.length; i++) {
@@ -111,7 +105,7 @@ function cardListener(i) {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
-      setTimeout(compareCards, 1900);
+      setTimeout(compareCards, 1750);
       break;
     default:
   }
