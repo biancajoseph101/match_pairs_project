@@ -148,7 +148,8 @@ function resetBoard() {
   flipTwo.name = '';
   flipTwo.index = '';
   cardsClicked = 0;
-  addClicks();
+  if (gameOver === false) {
+    addClicks();
 }
 
 console.log(winnerMessageCount);

@@ -153,9 +153,6 @@ function resetBoard() {
   }
 }
 
-//console.log(winnerMessageCount);
-//checkEndGame();
-
 function checkEndGame() {
   console.log(winnerMessageCount);
   if (winnerMessageCount === 4) {
