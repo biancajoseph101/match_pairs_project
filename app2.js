@@ -1,17 +1,22 @@
 //variables
 const cards = [...document.querySelectorAll('.backcard')];
 const display = document.querySelector('.display');
+
+const restartButton = (document.querySelector('#restartButton').onclick =
+  function () {
+    location.href =
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
+  });
+
 const firstLevelButton = (document.querySelector('#firstLevelButton').onclick =
   function () {
     location.href =
       'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
   });
 
-const restartButton = (document.querySelector('#restartButton').onclick =
-  Init());
-
 let cardsClicked = 0;
 let winnerMessageCount = 0;
+
 let flipOne = {
   name: '',
   index: ''
@@ -22,6 +27,7 @@ let flipTwo = {
 };
 let cardsMatched = false;
 let gameOver = false;
+
 const cardBack =
   'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F218%2F160%2Foriginal%2Fornamental-round-lace-pattern-vector.jpg&f=1&nofb=1';
 
@@ -105,7 +111,7 @@ function cardListener(i) {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
-      setTimeout(compareCards, 1800);
+      setTimeout(compareCards, 1900);
       break;
     default:
   }
@@ -162,31 +168,4 @@ function checkEndGame() {
   }
 }
 
-// if (cards[i] === true) {
-//   gameOver = true;
-//   display.innerText = 'CONGRATULATIONS YOU WIN!';
-// }
-
-// for (let i = 0; i < cards.length; i++) {
-//     cards[i].addEventListener('click', () => {
-//         if (cardsMatched)
-//     })}
-
-function Init() {
-  cardsClicked = 0;
-  winnerMessageCount = 0;
-  flipOne = {
-    name: '',
-    index: ''
-  };
-  flipTwo = {
-    name: '',
-    index: ''
-  };
-  cardsMatched = false;
-  gameOver = false;
-  cardBack =
-    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F218%2F160%2Foriginal%2Fornamental-round-lace-pattern-vector.jpg&f=1&nofb=1';
-}
-
-restartButton.addEventListener('click', restartGame());
+//restartButton.addEventListener('click', restartGame());
