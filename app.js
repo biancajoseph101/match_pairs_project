@@ -158,8 +158,7 @@ function resetBoard() {
 
 function checkEndGame() {
   if (winnerMessageCount === 4) {
-    display.innerText =
-      'CONGRATULATIONS YOU WON! PLAY AGAIN OR GO TO LEVEL TWO.';
+    display.innerText = 'CONGRATULATIONS YOU WON!';
     gameOver = true;
     removeClicks();
   }

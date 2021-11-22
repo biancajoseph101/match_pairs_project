@@ -1,4 +1,4 @@
-# **Match Pairs Game**
+# **ANIMAL GROUP NAMES MATCHING GAME**
 
 ### **Due Date: 11/23/2021 1:30EST**
 
@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-A card game using HTML, CSS and JavaScript for users to test their animal vocabulary skills and memory skills through matching cards. In order to win, the user must match all of the pairs on the board. The winner cannot lose, however, they can replay as many times as they want and gain satisfaction through achieving new personal records by beating their previous time it took them to win. There are two levels. Level two is more challenging because vocabulary in level two is considerably harder and the amount of time that the card is shown is shorter.
+A card game using HTML, CSS and JavaScript for users to test their animal vocabulary skills and memory skills through matching cards. In order to win, the user must match all of the pairs on the board. There are three levels. Levels two and three are more challenging because the vocabulary is considerably harder and the amount of time that the card is shown is shorter.
 
 ---
 
