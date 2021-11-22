@@ -14,6 +14,12 @@ const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
       'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
   });
 
+const homePageButton = (document.querySelector('#homePageButton').onclick =
+  function () {
+    location.href =
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/homepage.html';
+  });
+
 let cardsClicked = 0;
 let winnerMessageCount = 0;
 
