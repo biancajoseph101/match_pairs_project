@@ -95,6 +95,10 @@ body {
   display: inline-block;
   font-size: 20px;
 }
+#firstLevelButton:active {
+  background-color: darkblue;
+  transform: translateY(4px);
+}
 
 #nextLevelButton {
   background-color: #5b34b4;
@@ -105,6 +109,10 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
+}
+#nextLevelButton:active {
+  background-color: darkblue;
+  transform: translateY(4px);
 }
 
 #lastLevelButton {
@@ -117,7 +125,10 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-
+#lastLevelButton:active {
+  background-color: darkblue;
+  transform: translateY(4px);
+}
 #restartButton {
   background-color: #ff822f;
   border: 2px solid white;
@@ -129,6 +140,10 @@ body {
   font-size: 20px;
   margin-bottom: 50px;
 }
+#restartButton:active {
+  background-color: darkblue;
+  transform: translateY(4px);
+}
 
 #homePageButton {
   background-color: #50dac3;
@@ -139,4 +154,8 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
+}
+#homePageButton:active {
+  background-color: darkblue;
+  transform: translateY(4px);
 }
