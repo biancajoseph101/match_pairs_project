@@ -133,12 +133,12 @@ function incorrectPair() {
 function resetBoard() {
   if (cardsMatched === true) {
     display.innerText = '';
-    display.innerText = 'NICE JOB!';
+    display.innerText = "IT'S A MATCH!";
     winnerMessageCount++;
     checkEndGame();
   } else if (cardsMatched === false) {
     display.innerText = '';
-    display.innerText = 'BETTER LUCK NEXT TIME...';
+    display.innerText = 'NOT QUITE...';
     incorrectPair();
   }
   flipOne.name = '';
@@ -153,7 +153,8 @@ function resetBoard() {
 
 function checkEndGame() {
   if (winnerMessageCount === 4) {
-    display.innerText = 'CONGRATULATIONS YOU WON!';
+    display.innerText =
+      'YOU DID IT! ANSWERS: SCHOOL OF FISH, ARMY OF FROGS, PRIDE OF LIONS, LITTER OF PUPPIES';
     gameOver = true;
     removeClicks();
   }

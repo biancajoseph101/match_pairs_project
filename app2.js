@@ -138,7 +138,7 @@ function resetBoard() {
     checkEndGame();
   } else if (cardsMatched === false) {
     display.innerText = '';
-    display.innerText = 'HMM..TRY AGAIN';
+    display.innerText = 'HMM...TRY AGAIN';
     incorrectPair();
   }
   flipOne.name = '';
@@ -153,7 +153,8 @@ function resetBoard() {
 
 function checkEndGame() {
   if (winnerMessageCount === 4) {
-    display.innerText = 'CONGRATULATIONS YOU WON!';
+    display.innerText =
+      'ALL CARDS MATCHED! ANSWERS: ARRAY OF HEDGEHOGS, MURDER OF CROWS, BANK OF KOMODO DRAGONS, FEVER OF STINGRAYS';
     gameOver = true;
     removeClicks();
   }

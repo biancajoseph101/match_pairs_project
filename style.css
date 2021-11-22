@@ -37,13 +37,14 @@ body {
   font-weight: bold;
   font-size: xx-large;
   text-align: center;
+  text-shadow: 1px 1px 2px white;
   font-style: italic;
 }
 
 .gameIntro {
   font-size: large;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .gameContainer {
@@ -95,13 +96,14 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-#firstLevelButton:active {
-  background-color: darkblue;
+#firstLevelButton:hover {
+  background-color: darkslateblue;
   transform: translateY(4px);
+  text-shadow: 1px 1px 2px white;
 }
 
 #nextLevelButton {
-  background-color: #5b34b4;
+  background-color: darkorchid;
   border: 2px solid white;
   color: white;
   padding: 15px 32px;
@@ -110,13 +112,14 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-#nextLevelButton:active {
-  background-color: darkblue;
+#nextLevelButton:hover {
+  background-color: darkslateblue;
   transform: translateY(4px);
+  text-shadow: 1px 1px 2px white;
 }
 
 #lastLevelButton {
-  background-color: #c72b8e;
+  background-color: #cc35ba;
   border: 2px solid white;
   color: white;
   padding: 15px 32px;
@@ -125,9 +128,10 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-#lastLevelButton:active {
-  background-color: darkblue;
+#lastLevelButton:hover {
+  background-color: darkslateblue;
   transform: translateY(4px);
+  text-shadow: 1px 1px 2px white;
 }
 #restartButton {
   background-color: #ff822f;
@@ -140,13 +144,14 @@ body {
   font-size: 20px;
   margin-bottom: 50px;
 }
-#restartButton:active {
-  background-color: darkblue;
+#restartButton:hover {
+  background-color: rgb(227, 215, 88);
   transform: translateY(4px);
+  text-shadow: 1px 1px 2px white;
 }
 
 #homePageButton {
-  background-color: #50dac3;
+  background-color: #50c5e8;
   border: 2px solid white;
   color: white;
   padding: 15px 32px;
@@ -155,7 +160,8 @@ body {
   display: inline-block;
   font-size: 20px;
 }
-#homePageButton:active {
-  background-color: darkblue;
+#homePageButton:hover {
+  background-color: darkslateblue;
   transform: translateY(4px);
+  text-shadow: 1px 1px 2px white;
 }

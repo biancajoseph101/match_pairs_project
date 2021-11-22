@@ -127,12 +127,12 @@ function incorrectPair() {
 function resetBoard() {
   if (cardsMatched === true) {
     display.innerText = '';
-    display.innerText = 'GREAT JOB!';
+    display.innerText = 'NICE JOB!';
     winnerMessageCount++;
     checkEndGame();
   } else if (cardsMatched === false) {
     display.innerText = '';
-    display.innerText = 'NOT QUITE...';
+    display.innerText = 'BETTER LUCK NEXT TIME...';
     incorrectPair();
   }
   flipOne.name = '';
@@ -147,7 +147,8 @@ function resetBoard() {
 
 function checkEndGame() {
   if (winnerMessageCount === 4) {
-    display.innerText = 'CONGRATULATIONS YOU WON!';
+    display.innerText =
+      'CONGRATS! ANSWERS: TOWER OF GIRAFFES, BED OF CLAMS, CRASH OF RHINOS, BUSINESS OF FERRETS';
     gameOver = true;
     removeClicks();
   }
