@@ -161,7 +161,8 @@ checkEndGame();
 function checkEndGame() {
   console.log(winnerMessageCount);
   if (winnerMessageCount === 4) {
-    display.innerText = 'CONGRATULATIONS YOU WON!';
+    display.innerText =
+      'CONGRATULATIONS YOU WON! PLAY AGAIN OR GO TO LEVEL TWO.';
     gameOver = true;
   }
 }
