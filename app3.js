@@ -64,7 +64,7 @@ const cardObjects = [
   {
     name: 'ferretsBusiness',
     card: 6,
-    url: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipartix.com%2Fwp-content%2Fuploads%2F2016%2F06%2FBusiness-clipart-free-clipart-the-cliparts.gif&f=1&nofb=1'
+    url: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fdata_images%2F575324.jpg&f=1&nofb=1'
   },
   {
     name: 'giraffesTower',
@@ -148,7 +148,7 @@ function resetBoard() {
 function checkEndGame() {
   if (winnerMessageCount === 4) {
     display.innerText =
-      'CONGRATS! \n ANSWERS: TOWER OF GIRAFFES, BED OF CLAMS, CRASH OF RHINOS, BUSINESS OF FERRETS';
+      'CONGRATS ON COMPLETING THE HARDEST LEVEL! \n ANSWERS: TOWER OF GIRAFFES, BED OF CLAMS, CRASH OF RHINOS, BUSINESS OF FERRETS';
     gameOver = true;
     removeClicks();
   }

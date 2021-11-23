@@ -26,7 +26,7 @@ A matching card game with a twist. This game was developed for users to test the
 ### **_How to Get Started_**
 
 - _Read the instructions and example on the homepage_
-- _Select your level of difficulty ranging from level 1-3 with level 1 being the easiest_
+- _Select your level of difficulty ranging from levels 1-3 with level 1 being the easiest_
 - _Click on a card to reveal a photo of animals or a clipart image_
 
   - _If the photo is a group of animals, try to identify the name of the animals_
@@ -43,6 +43,8 @@ A matching card game with a twist. This game was developed for users to test the
 ---
 
 ### **_Screenshots_**
+
+![Image](https://i.imgur.com/8muBpSY.png)
 
 ![Image](https://i.imgur.com/ceMmEkg.png)
 
