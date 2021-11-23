@@ -16,7 +16,7 @@ const lastLevelButton = (document.querySelector('#lastLevelButton').onclick =
 const homePageButton = (document.querySelector('#homePageButton').onclick =
   function () {
     location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/homepage.html';
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
   });
 
 let cardsClicked = 0;
@@ -154,7 +154,7 @@ function resetBoard() {
 function checkEndGame() {
   if (winnerMessageCount === 4) {
     display.innerText =
-      'ALL CARDS MATCHED! ANSWERS: ARRAY OF HEDGEHOGS, MURDER OF CROWS, BANK OF KOMODO DRAGONS, FEVER OF STINGRAYS';
+      'ALL CARDS MATCHED! \n ANSWERS: ARRAY OF HEDGEHOGS, MURDER OF CROWS, BANK OF KOMODO DRAGONS, FEVER OF STINGRAYS';
     gameOver = true;
     removeClicks();
   }

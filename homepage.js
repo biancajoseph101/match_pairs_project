@@ -1,7 +1,7 @@
 const firstLevelButton = (document.querySelector('#firstLevelButton').onclick =
   function () {
     location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index1.html';
   });
 
 const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =

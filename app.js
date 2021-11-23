@@ -4,7 +4,7 @@ const display = document.querySelector('.display');
 const restartButton = (document.querySelector('#restartButton').onclick =
   function () {
     location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index1.html';
   });
 
 const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
@@ -16,7 +16,7 @@ const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
 const homePageButton = (document.querySelector('#homePageButton').onclick =
   function () {
     location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/homepage.html';
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
   });
 
 let cardsClicked = 0;
@@ -154,7 +154,7 @@ function resetBoard() {
 function checkEndGame() {
   if (winnerMessageCount === 4) {
     display.innerText =
-      'YOU DID IT! ANSWERS: SCHOOL OF FISH, ARMY OF FROGS, PRIDE OF LIONS, LITTER OF PUPPIES';
+      'YOU DID IT! \n ANSWERS: SCHOOL OF FISH, ARMY OF FROGS, PRIDE OF LIONS, LITTER OF PUPPIES';
     gameOver = true;
     removeClicks();
   }

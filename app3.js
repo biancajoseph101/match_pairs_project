@@ -10,7 +10,7 @@ const restartButton = (document.querySelector('#restartButton').onclick =
 const homePageButton = (document.querySelector('#homePageButton').onclick =
   function () {
     location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/homepage.html';
+      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
   });
 
 let cardsClicked = 0;
@@ -98,7 +98,7 @@ function cardListener(i) {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
-      setTimeout(compareCards, 1750);
+      setTimeout(compareCards, 1740);
       break;
     default:
   }
@@ -148,7 +148,7 @@ function resetBoard() {
 function checkEndGame() {
   if (winnerMessageCount === 4) {
     display.innerText =
-      'CONGRATS! ANSWERS: TOWER OF GIRAFFES, BED OF CLAMS, CRASH OF RHINOS, BUSINESS OF FERRETS';
+      'CONGRATS! \n ANSWERS: TOWER OF GIRAFFES, BED OF CLAMS, CRASH OF RHINOS, BUSINESS OF FERRETS';
     gameOver = true;
     removeClicks();
   }
