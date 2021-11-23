@@ -1,17 +1,11 @@
-const firstLevelButton = (document.querySelector('#firstLevelButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index1.html';
-  });
+document.getElementById('firstLevelButton').addEventListener('click', () => {
+  window.location = '/index1.html';
+});
 
-const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
-  });
+document.getElementById('lastLevelButton').addEventListener('click', () => {
+  window.location = '/index3.html';
+});
 
-const lastLevelButton = (document.querySelector('#lastLevelButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index3.html';
-  });
+document.getElementById('nextLevelButton').addEventListener('click', () => {
+  window.location = '/index2.html';
+});

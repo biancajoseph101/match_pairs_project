@@ -4,7 +4,7 @@
 
 ### **By: Bianca Joseph**
 
-[Trello](https://trello.com/b/1p1CNl4J/match-pairs-game) | [GitHub](https://github.com/biancajoseph101)
+[Trello](https://trello.com/b/1p1CNl4J/match-pairs-game) | [GitHub](https://github.com/biancajoseph101) | [Game] (link)
 
 ---
 

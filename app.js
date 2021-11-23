@@ -1,23 +1,35 @@
 const cards = [...document.querySelectorAll('.backcard')];
 const display = document.querySelector('.display');
 
-const restartButton = (document.querySelector('#restartButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index1.html';
-  });
+document.getElementById('restartButton').addEventListener('click', () => {
+  window.location = './index1.html';
+});
 
-const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
-  });
+// const restartButton = (document.querySelector('#restartButton').onclick =
+//   function () {
+//     location.href =
+//       '/match_pairs_project/index1.html';
+//   });
 
-const homePageButton = (document.querySelector('#homePageButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
-  });
+document.getElementById('nextLevelButton').addEventListener('click', () => {
+  window.location = './index2.html';
+});
+
+// const nextLevelButton = (document.querySelector('#nextLevelButton').onclick =
+//   function () {
+//     location.href =
+//       'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
+//   });
+
+document.getElementById('homePageButton').addEventListener('click', () => {
+  window.location = './index.html';
+});
+
+// const homePageButton = (document.querySelector('#homePageButton').onclick =
+//   function () {
+//     location.href =
+//       'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
+//   });
 
 let cardsClicked = 0;
 let winnerMessageCount = 0;
@@ -132,12 +144,10 @@ function incorrectPair() {
 
 function resetBoard() {
   if (cardsMatched === true) {
-    display.innerText = '';
     display.innerText = "IT'S A MATCH!";
     winnerMessageCount++;
     checkEndGame();
   } else if (cardsMatched === false) {
-    display.innerText = '';
     display.innerText = 'NOT QUITE...';
     incorrectPair();
   }

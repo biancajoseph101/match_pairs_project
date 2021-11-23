@@ -47,8 +47,10 @@ body {
 }
 
 .example {
-  width: 230px;
+  width: 210px;
   height: 150px;
+  background-color: white;
+  padding: 2px;
 }
 
 .gameContainer {

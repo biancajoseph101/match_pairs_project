@@ -1,23 +1,17 @@
 const cards = [...document.querySelectorAll('.backcard')];
 const display = document.querySelector('.display');
 
-const restartButton = (document.querySelector('#restartButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index2.html';
-  });
+document.getElementById('restartButton').addEventListener('click', () => {
+  window.location = './index2.html';
+});
 
-const lastLevelButton = (document.querySelector('#lastLevelButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index3.html';
-  });
+document.getElementById('lastLevelButton').addEventListener('click', () => {
+  window.location = './index3.html';
+});
 
-const homePageButton = (document.querySelector('#homePageButton').onclick =
-  function () {
-    location.href =
-      'file:///Users/bianca/ga_seir/projects/match_pairs_project/index.html';
-  });
+document.getElementById('homePageButton').addEventListener('click', () => {
+  window.location = './index.html';
+});
 
 let cardsClicked = 0;
 let winnerMessageCount = 0;
