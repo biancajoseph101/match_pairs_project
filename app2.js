@@ -98,7 +98,7 @@ function cardListener(i) {
       flipTwo.name = cardObjects[i].name;
       flipTwo.index = i;
       removeClicks();
-      setTimeout(compareCards, 1750);
+      setTimeout(compareCards, 1900);
       break;
     default:
   }
